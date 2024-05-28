@@ -10,4 +10,9 @@ For Debian/Ubuntu
 sudo apt-get install libsdl2-2.0-0
 ```
 
+Compile with
+``` bash
+g++ -o game_of_life main.cpp -lSDL2
+```
+
 ![](https://raw.githubusercontent.com/pandamin8/game_of_life_cpp/main/life.gif)
