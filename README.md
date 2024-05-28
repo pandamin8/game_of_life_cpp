@@ -9,3 +9,5 @@ For Debian/Ubuntu
 ``` bash
 sudo apt-get install libsdl2-2.0-0
 ```
+
+![](https://raw.githubusercontent.com/pandamin8/game_of_life_cpp/main/life.gif)
