@@ -32,7 +32,7 @@ const int CELL_SIZE = 5;
 
 // This function checks the surroundings of a cell and apply the game of life rules 
 // on the cell
-bool isAlive (std::array<std::array<int, GAME_HEIGHT>, GAME_WIDTH>& game, const int x, const int y) {
+bool isAlive (array<array<int, GAME_HEIGHT>, GAME_WIDTH>& game, const int x, const int y) {
     int alive = 0;
 
     // Check left
@@ -90,12 +90,12 @@ int main() {
         return 1;
     }
 
-    std::array<std::array<int, GAME_HEIGHT>, GAME_WIDTH> display {};
-    std::array<std::array<int, GAME_HEIGHT>, GAME_WIDTH> swap {};
+    array<array<int, GAME_HEIGHT>, GAME_WIDTH> display {};
+    array<array<int, GAME_HEIGHT>, GAME_WIDTH> swap {};
 
     // Create random alive cells
     for (auto& row : display) {
-        std::generate(row.begin(), row.end(), []() { return rand() % 10 == 0 ? 1 : 0; });
+        generate(row.begin(), row.end(), []() { return rand() % 10 == 0 ? 1 : 0; });
     }
 
     SDL_Event e;
@@ -128,7 +128,7 @@ int main() {
         SDL_RenderPresent(renderer);
 
         // Copy swap to the screen
-        std::copy(swap.begin(), swap.end(), display.begin());
+        copy(swap.begin(), swap.end(), display.begin());
     }
         
     SDL_DestroyRenderer(renderer);
